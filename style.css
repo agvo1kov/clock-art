@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.hand {
+    /* opacity: 0; */
+}
+
+.piptyk {
+    /* transform: scale(0.15); */
+}
+
+.logo-wrapper {
+    position: relative;
+}
+
+header h1.logo, header h1.logo-blur, h1.logo-white {
+    font-size: 52px;
+    margin: 30px 0 0;
+}
+
+header h1.logo {
+    position: relative;
+    z-index: 12;
+}
+
+h1.logo-white {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0;
+    width: 400px;
+    display: inline-block;
+    /* background: green; */
+    color: transparent;
+    background: white;
+    overflow: hidden;
+}
+
+h1.logo-blur {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 !important;
+    width: 400px;
+    display: inline-block;
+    /* background: green; */
+    color: transparent;
+    background: white;
+    filter: blur(8px);
+    overflow: hidden;
+}
+
+.slogan-wrapper {
+    position: relative;
+}
+
+header h2.slogan, header h2.slogan-blur, h2.slogan-white {
+    font-size: 18px;
+    /* font-size: 13px; */
+    font-weight: 100;
+    /* font-family: 'Kurale', serif; */
+    /* font-family: 'Kelly Slab', cursive; */
+    /* font-style: italic; */
+    /* font-family: 'Poiret One', cursive; */
+    font-family: 'Marck Script', cursive;
+    word-spacing: -0.8px;
+    /* color: #d1d1d6; */
+    /* color: #c7c7cc; */
+    /* color: #aeaeb2; */
+    /* color: #636366; */
+}
+
+h2.slogan {
+    position: relative;
+    z-index: 12;
+    color: #8e8e93;
+}
+
+h2.slogan-white {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 580px;
+    display: inline-block;
+    /* background: green; */
+    color: transparent;
+    background: white;
+    overflow: hidden;
+}
+
+h2.slogan-blur {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 580px;
+    display: inline-block;
+    /* background: green; */
+    color: transparent;
+    background: white;
+    filter: blur(8px);
+    overflow: hidden;
+}
+
+h2.slogan-blur .circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgb(238, 238, 238);
+    box-shadow: inset 0px 0px 20px rgba(150, 150, 150, 1);
+    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
+}
+
+h1.logo-blur .circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgb(238, 238, 238);
+    box-shadow: inset 0px 0px 20px rgba(150, 150, 150, 0.9);
+    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
+}
+
+main {
+    padding: 70px 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main section.clock-section {
+    width: 300px;
+}
+
+main section.clock-section article.desc {
+    margin-top: 20px;
+    font-size: 16px;
+    /* text-align: left; */
+    line-height: 23px;
+    word-spacing: 4px;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px;
+    border-radius: 100%;
+}
+
+.clock .digit, .clock .weekday {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 29px;
+}
+
+.clock.test .digit {
+    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Lobster Two', cursive; */
+    /* font-size: 20px; */
+}
+
+.clock.calendar .digit {
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Lobster Two', cursive; */
+    font-size: 20px;
+}
+
+.clock.calendar .weekday {
+    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Lobster Two', cursive; */
+    font-size: 15px;
+}
+
+.weekday.digit-1 {
+    transform: rotate(0deg) translate(0, -87px) rotate(-0deg);
+}
+
+.weekday.digit-2 {
+    transform: rotate(51deg) translate(0, -87px) rotate(-51deg);
+}
+
+.weekday.digit-3 {
+    transform: rotate(102deg) translate(0, -87px) rotate(-102deg);
+}
+
+.weekday.digit-4 {
+    transform: rotate(153deg) translate(0, -87px) rotate(-153deg);
+}
+
+.weekday.digit-5 {
+    transform: rotate(204deg) translate(0, -87px) rotate(-204deg);
+}
+
+.weekday.digit-6 {
+    transform: rotate(255deg) translate(0, -87px) rotate(-255deg);
+}
+
+.weekday.digit-7 {
+    transform: rotate(306deg) translate(0, -87px) rotate(-306deg);
+}
+
+.digit.digit-1 {
+    transform: rotate(30deg) translate(0, -125px) rotate(-30deg);
+}
+
+.digit.digit-2 {
+    transform: rotate(60deg) translate(0, -125px) rotate(-60deg);
+}
+
+.digit.digit-3 {
+    transform: rotate(90deg) translate(0, -125px) rotate(-90deg);
+}
+
+.digit.digit-4 {
+    transform: rotate(120deg) translate(0, -125px) rotate(-120deg);
+}
+
+.digit.digit-5 {
+    transform: rotate(150deg) translate(0, -125px) rotate(-150deg);
+}
+
+.digit.digit-6 {
+    transform: rotate(180deg) translate(0, -125px) rotate(-180deg);
+}
+
+.digit.digit-7 {
+    transform: rotate(210deg) translate(0, -125px) rotate(-210deg);
+}
+
+.digit.digit-8 {
+    transform: rotate(240deg) translate(0, -125px) rotate(-240deg);
+}
+
+.digit.digit-9 {
+    transform: rotate(270deg) translate(0, -125px) rotate(-270deg);
+}
+
+.digit.digit-10 {
+    transform: rotate(300deg) translate(0, -125px) rotate(-300deg);
+}
+
+.digit.digit-11 {
+    transform: rotate(330deg) translate(0, -125px) rotate(-330deg);
+}
+
+.digit.digit-12 {
+    transform: translate(0, -125px)
+}
+
+.clock.calendar .digit.digit-1 {
+    transform: rotate(30deg) translate(0, -135px); /* rotate(-30deg); */
+}
+
+.clock.calendar .digit.digit-2 {
+    transform: rotate(60deg) translate(0, -135px); /* rotate(-60deg); */
+}
+
+.clock.calendar .digit.digit-3 {
+    transform: rotate(90deg) translate(0, -135px); /* rotate(-90deg); */
+}
+
+.clock.calendar .digit.digit-4 {
+    transform: rotate(120deg) translate(0, -135px); /* rotate(-120deg); */
+}
+
+.clock.calendar .digit.digit-5 {
+    transform: rotate(150deg) translate(0, -131px) rotate(-180deg);
+}
+
+.clock.calendar .digit.digit-6 {
+    transform: rotate(180deg) translate(0, -131px) rotate(-180deg);
+}
+
+.clock.calendar .digit.digit-7 {
+    transform: rotate(210deg) translate(0, -131px) rotate(-180deg);
+}
+
+.clock.calendar .digit.digit-8 {
+    transform: rotate(240deg) translate(0, -135px); /* rotate(-240deg); */
+}
+
+.clock.calendar .digit.digit-9 {
+    transform: rotate(270deg) translate(0, -135px); /* rotate(-270deg); */
+}
+
+.clock.calendar .digit.digit-10 {
+    transform: rotate(300deg) translate(0, -135px); /* rotate(-300deg); */
+}
+
+.clock.calendar .digit.digit-11 {
+    transform: rotate(330deg) translate(0, -135px); /* rotate(-330deg); */
+}
+
+.clock.calendar .digit.digit-12 {
+    transform: translate(0, -135px)
+}
+
+.digit-input {
+    position: relative;
+    z-index: 35;
+    width: 50px;
+    text-align: center;
+    font-size: 26px;
+    border: none;
+    background: none;
+    border: rgba(0, 0, 0, 0) 1px solid;
+    transition: all ease-out 500ms;
+}
+
+.digit-input.editable {
+    transition: all ease-out 500ms;
+    box-shadow: #2b92ff 0 0 5px;
+    border: #4f4f4f 1px solid;
+    border-radius: 2px;
+}
+
+.edit-btn {
+    /* display: none; */
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    transform: translate(-10px, 15px) rotate(-42deg);
+    cursor: pointer;
+    transition: all ease-out 100ms;
+}
+.edit-btn:hover {
+    transform: scale(1.2) translate(-7px, 10px) rotate(-30deg);
+    padding-bottom: 5px;
+    transition: all ease-out 100ms;
+}
+
+.clock {
+    position: relative;
+}
+
+.clock .clockface {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 30;
+}
+
+.clock .clockhands {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    top: 0;
+}
+
+.clock .clockhands .piptyk {
+    z-index: 50;
+    position: absolute;
+    top: 145px;
+    left: 145px;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    /* background: gold; */
+    background-color: transparent;
+    background-image: url(./piptyk.png);
+    background-size: contain;
+    background-position: center;
+    /* opacity: 0; */
+}
+
+.clock .clockhands .hand {
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 120px;
+    border-radius: 3px;
+    transform-origin: 50% 100%; /* bottom center; */
+    /* transform: translate(148px, 30px); */
+}
+
+.clock .clockhands .hand.hour {
+    top: 70.5px;
+    left: 142px;
+    width: 15px;
+    height: 99px;
+    border-radius: 10px;
+    transform: rotate(60deg);
+    background-color: transparent;
+    background-image: url(./hour-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 81%;
+    /* display: none; */
+    /* animation: clockround 43200s linear 0s infinite forwards; */
+}
+
+.clock .clockhands .hand.minute {
+    top: 42.8px;
+    left: 143.5px;
+    width: 13px;
+    height: 125px;
+    transform: rotate(110deg);
+    background-color: transparent;
+    background-image: url(./minute-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 85.8%;
+    /* display: none; */
+    /* animation: clockround 3600s linear 0s infinite forwards; */
+}
+
+.clock .clockhands .hand.second {
+    z-index: 50;
+    top: 46px;
+    left: 146px;
+    width: 7px;
+    height: 145px;
+    /* background: #ff3b30; */
+    background-color: transparent;
+    background-image: url(./second-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 71%;
+    transform: rotate(0deg);
+    /* animation: clockround 60s linear 0s infinite forwards; */
+}
+
+@keyframes clockround {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+main section {
+    text-align: center;
+}
+
+main section h4 {
+    padding-top: 30px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+mark.price {
+    display: inline-block;
+    font-size: 17px;
+    margin: 20px 0 5px;
+    padding: 0 7px;
+    /* background: none; */
+}
+
+a.details {
+    display: inline-block;
+    color: black;
+    margin-right: 15px;
+    text-decoration: none;
+    display: none;
+}
+
+a.buy {
+    background: #ff3b30;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+article.delivery h3 {
+    margin-top: 30px;
+    font-weight: 100;
+    text-align: center;
+    font-size: 16px;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    /* background: gray; */
+}
+
+.circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    /* background: red; */
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
+}
+
+/* .shadows {
+    transform: translate(10px, 10px);
+} */
+
+.shadows .shadow-piptyk {
+    transform: translate(8px, 8px);
+}
+
+.shadows .shadow-piptyk .piptyk {
+    /* background: gray !important; */
+    background: rgba(0, 0, 0, 0.07) !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+
+
+.shadows .shadow-second {
+    transform: translate(7px, 7px);
+}
+
+.shadows .shadow-second .second {
+    /* background: gray !important; */
+    background-color: transparent;
+    background-image: url(./second-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 71%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+    /* background: rgba(0, 0, 0, 0.05) !important; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px; */
+}
+
+
+.shadows .shadow-minute {
+    transform: translate(5px, 5px);
+}
+
+.shadows .shadow-minute .minute {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.06) !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 3px; */
+    background-color: transparent;
+    background-image: url(./minute-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 85.8%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+}
+
+
+.shadows .shadow-hour {
+    transform: translate(2px, 2px);
+}
+
+.shadows .shadow-hour .hour {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
+    background-color: transparent;
+    background-image: url(./hour-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 81%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+}
+
+
+.shadows .shadow-month {
+    transform: translate(2px, 2px);
+}
+
+.shadows .shadow-month .hour {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
+    background-color: transparent;
+    background-image: url(./hour-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 81%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+}
+
+
+.shadows .shadow-day {
+    transform: translate(5px, 5px);
+}
+
+.shadows .shadow-day .minute {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.06) !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 0 3px; */
+    background-color: transparent;
+    background-image: url(./minute-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 85.8%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 11px;
+    color: #aeaeb2;
+}
