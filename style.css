@@ -187,7 +187,7 @@ main section.clock-section {
 @media only screen and (max-device-width: 1125px) {
     .main-wrapper {
         width: 100vw;
-        overflow-x: scroll;
+        overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: auto;
     }
