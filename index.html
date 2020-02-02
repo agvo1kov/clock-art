@@ -4,6 +4,7 @@
         <title>CLOCK ❈ ART ‒ Особенные подарки</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width,user-scalable=yes" />
     </head>
     <body>
         <div class="circles" id="circles"></div>
@@ -19,149 +20,136 @@
                 <h2 class="slogan-blur" id="slogan-blur">Мы любим создавать особенные и уникальные подарки для Ваших близких.</h2>
             </div>
         </header>
-        <main>
-            <section class="clock-section">
-                <div class="clock test">
-                    <div class="clockhands">
-                        <div class="clockface">
-                            <div class="digit digit-1">1</div>
-                            <div class="digit digit-2">2</div>
-                            <div class="digit digit-3">3</div>
-                            <div class="digit digit-4">4</div>
-                            <div class="digit digit-5">5</div>
-                            <div class="digit digit-6">6</div>
-                            <div class="digit digit-7">7</div>
-                            <div class="digit digit-8">8</div>
-                            <div class="digit digit-9">6</div>
-                            <div class="digit digit-10">10</div>
-                            <div class="digit digit-11">11</div>
-                            <div class="digit digit-12">12</div>
+        <div class="main-wrapper">
+            <main>
+                <section class="clock-section">
+                    <div class="clock test">
+                        <div class="clockhands">
+                            <div class="clockface">
+                                <div class="digit digit-1">1</div>
+                                <div class="digit digit-2">2</div>
+                                <div class="digit digit-3">3</div>
+                                <div class="digit digit-4">4</div>
+                                <div class="digit digit-5">5</div>
+                                <div class="digit digit-6">6</div>
+                                <div class="digit digit-7">7</div>
+                                <div class="digit digit-8">8</div>
+                                <div class="digit digit-9">6</div>
+                                <div class="digit digit-10">10</div>
+                                <div class="digit digit-11">11</div>
+                                <div class="digit digit-12">12</div>
+                            </div>
+                            <div class="shadows">
+                                <div class="shadow-hour">
+                                    <div class="hand hour regular-hand-hour"></div>
+                                </div>
+                                <div class="shadow-minute">
+                                    <div class="hand minute regular-hand-minute"></div>
+                                </div>
+                                <div class="shadow-second">
+                                    <div class="hand second regular-hand-second"></div>
+                                </div>
+                                <div class="shadow-piptyk">
+                                    <div class="piptyk"></div>
+                                </div>
+                            </div>
+                            <div class="hand hour regular-hand-hour"></div>
+                            <div class="hand minute regular-hand-minute"></div>
+                            <div class="hand second regular-hand-second"></div>
+                            <div class="piptyk"></div>
                         </div>
-                        <div class="shadows">
-                            <div class="shadow-hour">
-                                <div class="hand hour regular-hand-hour"></div>
-                            </div>
-                            <div class="shadow-minute">
-                                <div class="hand minute regular-hand-minute"></div>
-                            </div>
-                            <div class="shadow-second">
-                                <div class="hand second regular-hand-second"></div>
-                            </div>
-                            <div class="shadow-piptyk">
-                                <div class="piptyk"></div>
-                            </div>
-                        </div>
-                        <div class="hand hour regular-hand-hour"></div>
-                        <div class="hand minute regular-hand-minute"></div>
-                        <div class="hand second regular-hand-second"></div>
-                        <div class="piptyk"></div>
                     </div>
-                </div>
-                <h4>Часы-тест на внимательность</h4>
-                <mark class="price">649 ₽</mark>
-                <!-- <br /> -->
-                <a href="#" class="details">Подробнее ➤</a><a href="#" class="buy">Купить</a>
-                <article class="desc">
-                    Оригинальные часы ручной сборки. "6" вместо "9".
-                </article>
-            </section>
-            <section class="clock-section">
-                <div class="clock calendar">
-                    <div class="clockhands">
-                        <div class="clockface">
-                            <div class="digit digit-1">фев</div>
-                            <div class="digit digit-2">мар</div>
-                            <div class="digit digit-3">апр</div>
-                            <div class="digit digit-4">май</div>
-                            <div class="digit digit-5">июн</div>
-                            <div class="digit digit-6">июл</div>
-                            <div class="digit digit-7">авг</div>
-                            <div class="digit digit-8">сен</div>
-                            <div class="digit digit-9">окт</div>
-                            <div class="digit digit-10">ноя</div>
-                            <div class="digit digit-11">дек</div>
-                            <div class="digit digit-12">янв</div>
-                        </div>
-                        <div class="clockface">
-                            <div class="weekday digit-1">ПН</div>
-                            <div class="weekday digit-2">ВТ</div>
-                            <div class="weekday digit-3">СР</div>
-                            <div class="weekday digit-4">ЧТ</div>
-                            <div class="weekday digit-5">ПТ</div>
-                            <div class="weekday digit-6">СБ</div>
-                            <div class="weekday digit-7">ВС</div>
-                        </div>
-                        <div class="shadows">
-                            <div class="shadow-month">
-                                <div class="hand hour" id="month-shadow"></div>
-                            </div>
-                            <div class="shadow-day">
-                                <div class="hand minute" id="day-shadow"></div>
-                            </div>
-                            <div class="shadow-piptyk">
-                                <div class="piptyk"></div>
-                            </div>
-                        </div>
-                        <div class="hand hour" id="calendar-month-hand"></div>
-                        <div class="hand minute" id="calendar-day-hand"></div>
-                        <div class="piptyk"></div>
+                    <h4>Часы-тест на внимательность</h4>
+                    <div class="price-and-btn">
+                        <mark class="price">649 ₽</mark>
+                        <a href="#" class="buy">Купить</a>
                     </div>
-                </div>
-                <h4>Часы-календарь</h4>
-                <mark class="price">1 599 ₽</mark class="price">
-                <!-- <br /> -->
-                <a href="#" class="details">Подробнее ➤</a><a href="#" class="buy">Купить</a>
-                <article class="desc">
-                    Календарь с замедленным часовым механизмом.
-                </article>
-            </section>
-            <section class="clock-section">
-                <div class="clock">
-                    <div class="edit-btn" id="edit-btn">✎ Изменить</div>
-                    <div class="clockhands">
-                        <div class="clockface">
-                            <div class="digit digit-1"><input type="text" value="П" class="digit-input" /></div>
-                            <div class="digit digit-2"><input type="text" value="Р" class="digit-input" /></div>
-                            <div class="digit digit-3"><input type="text" value="О" class="digit-input" /></div>
-                            <div class="digit digit-4"><input type="text" value="С" class="digit-input" /></div>
-                            <div class="digit digit-5"><input type="text" value="Т" class="digit-input" /></div>
-                            <div class="digit digit-6"><input type="text" value="И" class="digit-input" /></div>
-                            <div class="digit digit-7"><input type="text" value="🙏🏻" class="digit-input" /></div>
-                            <div class="digit digit-8"><input type="text" value="М" class="digit-input" /></div>
-                            <div class="digit digit-9"><input type="text" value="Е" class="digit-input" /></div>
-                            <div class="digit digit-10"><input type="text" value="Н" class="digit-input" /></div>
-                            <div class="digit digit-11"><input type="text" value="Я" class="digit-input" /></div>
-                            <div class="digit digit-12"><input type="text" value="❤️" class="digit-input" /></div>
+                    <article class="desc">
+                        Оригинальные часы ручной сборки. "6" вместо "9".
+                    </article>
+                </section>
+                <section class="clock-section">
+                    <div class="clock super">
+                        <div class="clockhands">
+                            <div class="hand hour regular-hand-hour" id="super-hours"></div>
+                            <div class="hand minute regular-hand-minute" id="super-minutes"></div>
+                            <div class="hand second regular-hand-second" id="super-seconds"></div>
+                            <div class="shadows">
+                                <div class="shadow-hour">
+                                    <div class="hand hour regular-hand-hour"></div>
+                                </div>
+                                <div class="shadow-minute">
+                                    <div class="hand minute regular-hand-minute"></div>
+                                </div>
+                                <div class="shadow-second">
+                                    <div class="hand second regular-hand-second"></div>
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="shadow-piptyk">
+                                    <div class="piptyk"></div>
+                                </div>
+                            </div>
+                            <div class="piptyk"></div>
                         </div>
-                        <div class="shadows">
-                            <div class="shadow-hour">
-                                <div class="hand hour regular-hand-hour"></div>
-                            </div>
-                            <div class="shadow-minute">
-                                <div class="hand minute regular-hand-minute"></div>
-                            </div>
-                            <div class="shadow-second">
-                                <div class="hand second regular-hand-second"></div>
-                            </div>
-                            <div class="shadow-piptyk">
-                                <div class="piptyk"></div>
-                            </div>
-                        </div>
-                        <div class="hand hour regular-hand-hour"></div>
-                        <div class="hand minute regular-hand-minute"></div>
-                        <div class="hand second regular-hand-second"></div>
-                        <div class="piptyk"></div>
                     </div>
-                </div>
-                <h4>Свой вариант</h4>
-                <mark class="price">799 ₽</mark>
-                <!-- <br /> -->
-                <a href="#" class="details">Подробнее ➤</a><a href="#" class="buy">Купить</a>
-                <article class="desc">
-                    Часы с циферблатом по Вашему заказу.
-                </article>
-            </section>
-        </main>
+                    <h4>Воу-воу. Воу!</h4>
+                    <div class="price-and-btn">
+                        <mark class="price">999 ₽</mark>
+                        <a href="#" class="buy">Купить</a>
+                    </div>
+                    <article class="desc">
+                        Часы, которые показывают правильное время только в одной точке
+                    </article>
+                </section>
+                <section class="clock-section">
+                    <div class="clock">
+                        <div class="edit-btn" id="edit-btn">✎ Изменить</div>
+                        <div class="clockhands">
+                            <div class="clockface">
+                                <div class="digit digit-1"><input type="text" value="П" class="digit-input" /></div>
+                                <div class="digit digit-2"><input type="text" value="Р" class="digit-input" /></div>
+                                <div class="digit digit-3"><input type="text" value="О" class="digit-input" /></div>
+                                <div class="digit digit-4"><input type="text" value="С" class="digit-input" /></div>
+                                <div class="digit digit-5"><input type="text" value="Т" class="digit-input" /></div>
+                                <div class="digit digit-6"><input type="text" value="И" class="digit-input" /></div>
+                                <div class="digit digit-7"><input type="text" value="🙏🏻" class="digit-input" /></div>
+                                <div class="digit digit-8"><input type="text" value="М" class="digit-input" /></div>
+                                <div class="digit digit-9"><input type="text" value="Е" class="digit-input" /></div>
+                                <div class="digit digit-10"><input type="text" value="Н" class="digit-input" /></div>
+                                <div class="digit digit-11"><input type="text" value="Я" class="digit-input" /></div>
+                                <div class="digit digit-12"><input type="text" value="❤️" class="digit-input" /></div>
+                            </div>
+                            <div class="shadows">
+                                <div class="shadow-hour">
+                                    <div class="hand hour regular-hand-hour"></div>
+                                </div>
+                                <div class="shadow-minute">
+                                    <div class="hand minute regular-hand-minute"></div>
+                                </div>
+                                <div class="shadow-second">
+                                    <div class="hand second regular-hand-second"></div>
+                                </div>
+                                <div class="shadow-piptyk">
+                                    <div class="piptyk"></div>
+                                </div>
+                            </div>
+                            <div class="hand hour regular-hand-hour"></div>
+                            <div class="hand minute regular-hand-minute"></div>
+                            <div class="hand second regular-hand-second"></div>
+                            <div class="piptyk"></div>
+                        </div>
+                    </div>
+                    <h4>Свой вариант</h4>
+                    <div class="price-and-btn">
+                        <mark class="price">799 ₽</mark>
+                        <a href="#" class="buy">Купить</a>
+                    </div>
+                    <article class="desc">
+                        Часы с циферблатом по Вашему заказу.
+                    </article>
+                </section>
+            </main>
+        </div>
         <article class="delivery">
             <h3>Бесплатная доставка по Краснодару в течение <mark>48 часов.</mark></h3>
         </article>

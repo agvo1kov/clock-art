@@ -29,6 +29,7 @@ header {
 
 .logo-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 header h1.logo, header h1.logo-blur, h1.logo-white {
@@ -59,7 +60,7 @@ h1.logo-white {
 h1.logo-blur {
     z-index: 11;
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     right: 0;
     margin: 0 auto 0 !important;
@@ -74,6 +75,7 @@ h1.logo-blur {
 
 .slogan-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 header h2.slogan, header h2.slogan-blur, h2.slogan-white {
@@ -129,6 +131,29 @@ h2.slogan-blur {
     overflow: hidden;
 }
 
+@media only screen and (max-device-width: 1125px) {
+    header h1.logo, header h1.logo-blur, h1.logo-white {
+        font-size: 52px;
+        margin: 5px 0 0;
+    }
+
+    h1.logo-white {
+        width: 90vw;
+    }
+
+    h1.logo-blur {
+        width: 90vw;
+    }
+
+    h2.slogan-white {
+        width: 90vw;
+    }
+
+    h2.slogan-blur {
+        width: 90vw;
+    }
+}
+
 h2.slogan-blur .circle {
     position: absolute;
     width: 40px;
@@ -157,6 +182,49 @@ main {
 
 main section.clock-section {
     width: 300px;
+}
+
+@media only screen and (max-device-width: 1125px) {
+    .main-wrapper {
+        width: 100vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    main {
+        /* box-sizing: border-box; */
+        display: flex;
+        /* justify-content: ; */
+        width: 930px;
+        /* width: auto; */
+        /* padding: 0; */
+        padding: 0 20vw;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main section.clock-section {
+        width: 300px;
+        /* margin: 0 20px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-device-width: 340px) {
+    main {
+        width: 740px;
+    }
+
+    main section.clock-section {
+        width: 240px;
+    }
+
+    main .clock {
+        transform: scale(0.8);
+    }
 }
 
 main section.clock-section article.desc {
@@ -423,7 +491,7 @@ main section.clock-section article.desc {
     width: 15px;
     height: 99px;
     border-radius: 10px;
-    transform: rotate(60deg);
+    transform: rotate(-100deg);
     background-color: transparent;
     background-image: url(./hour-hand.png);
     background-size: contain;
@@ -452,7 +520,7 @@ main section.clock-section article.desc {
     z-index: 50;
     top: 46px;
     left: 146px;
-    width: 7px;
+    width: 6px;
     height: 145px;
     /* background: #ff3b30; */
     background-color: transparent;
@@ -461,7 +529,112 @@ main section.clock-section article.desc {
     background-position: center;
     transform-origin: 50% 71%;
     transform: rotate(0deg);
+    background-repeat: no-repeat;
+    transition: all linear 1s;
     /* animation: clockround 60s linear 0s infinite forwards; */
+}
+
+.clock.super .triangle {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    bottom: 0;
+    margin: auto;
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+}
+
+.clock.super .clockhands .hand {
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 120px;
+    border-radius: 3px;
+    /* transform: translate(148px, 30px); */
+    transform-origin: 50% 50%;
+}
+
+.clock.super .clockhands .hand.hour {
+    top: 10px;
+    left: 10px;
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    transform: rotate(60deg);
+    background-color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    /* transform-origin: 50% 81%; */
+    border-radius: 200px;
+    transition: all linear 1s;
+    /* display: none; */
+    /* animation: clockround 43200s linear 0s infinite forwards; */
+}
+
+.clock.super .clockhands .hand.minute {
+    top: 40px;
+    left: 40px;
+    width: 220px;
+    height: 220px;
+    transform: rotate(110deg);
+    background-color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    /* transform-origin: 50% 85.8%; */
+    border-radius: 150px;
+    transition: all linear 60s;
+    /* display: none; */
+    /* animation: clockround 3600s linear 0s infinite forwards; */
+}
+
+.clock.super .clockhands .hand.second {
+    z-index: 50;
+    top: 58px;
+    left: 58px;
+    width: 184px;
+    height: 184px;
+    /* background: #ff3b30; */
+    background-color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    /* transform-origin: 50% 71%; */
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    transition: all linear 1s;
+    border-radius: 100px;
+    /* animation: clockround 60s linear 0s infinite forwards; */
+}
+
+.clock.super .clockhands .hand.hour .label > div {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+.clock.super .clockhands .hand.minute .label > div {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+}
+.clock.super .clockhands .hand.second .label > div {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
+
+.clock.super .clockhands .hand.hour .label,
+.clock.super .clockhands .hand.minute .label,
+.clock.super .clockhands .hand.second .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 @keyframes clockround {
@@ -510,6 +683,15 @@ article.delivery h3 {
     font-size: 16px;
 }
 
+@media only screen and (max-device-width: 1125px) {
+    article.delivery h3 {
+        margin: 30px 50px 0;
+        font-weight: 100;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
 .circles {
     position: absolute;
     top: 0;
@@ -534,13 +716,16 @@ article.delivery h3 {
 } */
 
 .shadows .shadow-piptyk {
-    transform: translate(8px, 8px);
+    position: relative;
+    z-index: 50;
+    transform: translate(0.5px, 0.5px);
 }
 
 .shadows .shadow-piptyk .piptyk {
     /* background: gray !important; */
-    background: rgba(0, 0, 0, 0.07) !important;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+    background: rgba(0, 0, 0, 0.4) !important;
+    /* background: red !important; */
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
 }
 
 
@@ -638,4 +823,125 @@ footer {
     text-align: center;
     font-size: 11px;
     color: #aeaeb2;
+}
+
+@media only screen and (max-device-width: 1125px) {
+    .price-and-btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    main section.clock-section article.desc {
+        margin-top: 10px;
+    }
+
+    a.buy {
+        display: inline-block;
+        width: 140px;
+        height: 20px;
+        padding: 10px 0;
+    }
+
+    mark.price {
+        margin: 0;
+    }
+}
+
+
+.super .shadows .shadow-second {
+    transform: translate(7px, 7px);
+}
+
+.super .shadows .shadow-second .second {
+    /* background: gray !important; */
+    background-color: transparent;
+    background-image: url(./second-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 71%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
+    /* background: rgba(0, 0, 0, 0.05) !important; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px; */
+}
+
+
+.super .shadows .shadow-second {
+    transform: none;
+}
+
+.super .shadows .shadow-second .second {
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
+    background-color: transparent;
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    transform-origin: center center;
+    transform: none !important;
+    filter: none;
+    opacity: 1;
+    background-color: transparent !important;
+}
+
+
+.super .shadows .shadow-hour {
+    transform: none;
+}
+
+.super .shadows .shadow-hour .hour {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
+    background-color: transparent;
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    transform-origin: center center;
+    transform: none !important;
+    filter: none;
+    opacity: 1;
+    background-color: transparent !important;
+}
+
+
+.super .shadows .shadow-minute {
+    transform: none;
+}
+
+.super .shadows .shadow-minute .minute {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
+    background-color: transparent;
+    background-image: none;
+    background-size: contain;
+    background-position: center;
+    transform-origin: center center;
+    transform: none !important;
+    filter: none;
+    opacity: 1;
+    background-color: transparent !important;
+}
+
+
+.shadows .shadow-month {
+    transform: translate(2px, 2px);
+}
+
+.shadows .shadow-month .hour {
+    /* background: gray !important; */
+    /* background: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
+    background-color: transparent;
+    background-image: url(./hour-hand.png);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 50% 81%;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.2;
 }
