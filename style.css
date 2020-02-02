@@ -316,6 +316,14 @@ main section.clock-section article.desc {
     background-size: cover;
 }
 
+.custom .digit {
+    position: absolute;
+    z-index: 170;
+    height: 40px;
+    /* background-image: url(./test-min.png); */
+    background-size: cover;
+}
+
 .digit.digit-1 {
     width: 11px;
     transform: rotate(30deg) translate(0, -125px) rotate(-30deg);
@@ -475,6 +483,9 @@ main section.clock-section article.desc {
     position: relative;
 }
 
+.clock.custom .clockface {
+    z-index: 100;
+}
 .clock .clockface {
     position: absolute;
     top: 0;
