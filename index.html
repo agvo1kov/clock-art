@@ -20,24 +20,24 @@
                 <h2 class="slogan-blur" id="slogan-blur">Мы любим создавать особенные и уникальные подарки для Ваших близких.</h2>
             </div>
         </header>
-        <div class="main-wrapper">
+        <div class="main-wrapper" id="clock-wrapper">
             <main>
-                <section class="clock-section">
+                <section class="clock-section" id="section-1">
                     <div class="clock test">
                         <div class="clockhands">
                             <div class="clockface">
-                                <div class="digit digit-1">1</div>
-                                <div class="digit digit-2">2</div>
-                                <div class="digit digit-3">3</div>
-                                <div class="digit digit-4">4</div>
-                                <div class="digit digit-5">5</div>
-                                <div class="digit digit-6">6</div>
-                                <div class="digit digit-7">7</div>
-                                <div class="digit digit-8">8</div>
-                                <div class="digit digit-9">6</div>
-                                <div class="digit digit-10">10</div>
-                                <div class="digit digit-11">11</div>
-                                <div class="digit digit-12">12</div>
+                                <div class="digit digit-1"></div>
+                                <div class="digit digit-2"></div>
+                                <div class="digit digit-3"></div>
+                                <div class="digit digit-4"></div>
+                                <div class="digit digit-5"></div>
+                                <div class="digit digit-6"></div>
+                                <div class="digit digit-7"></div>
+                                <div class="digit digit-8"></div>
+                                <div class="digit digit-9"></div>
+                                <div class="digit digit-10"></div>
+                                <div class="digit digit-11"></div>
+                                <div class="digit digit-12"></div>
                             </div>
                             <div class="shadows">
                                 <div class="shadow-hour">
@@ -62,13 +62,13 @@
                     <h4>Часы-тест на внимательность</h4>
                     <div class="price-and-btn">
                         <mark class="price">649 ₽</mark>
-                        <a href="#" class="buy">Купить</a>
+                        <a href="#" class="buy" data-model="test">Купить</a>
                     </div>
                     <article class="desc">
                         Оригинальные часы ручной сборки. "6" вместо "9".
                     </article>
                 </section>
-                <section class="clock-section">
+                <section class="clock-section" id="section-2">
                     <div class="clock super">
                         <div class="clockhands">
                             <div class="hand hour regular-hand-hour" id="super-hours"></div>
@@ -76,13 +76,13 @@
                             <div class="hand second regular-hand-second" id="super-seconds"></div>
                             <div class="shadows">
                                 <div class="shadow-hour">
-                                    <div class="hand hour regular-hand-hour"></div>
+                                    <div class="hand hour"></div>
                                 </div>
                                 <div class="shadow-minute">
-                                    <div class="hand minute regular-hand-minute"></div>
+                                    <div class="hand minute"></div>
                                 </div>
                                 <div class="shadow-second">
-                                    <div class="hand second regular-hand-second"></div>
+                                    <div class="hand second"></div>
                                 </div>
                                 <div class="triangle"></div>
                                 <div class="shadow-piptyk">
@@ -95,13 +95,13 @@
                     <h4>Воу-воу. Воу!</h4>
                     <div class="price-and-btn">
                         <mark class="price">999 ₽</mark>
-                        <a href="#" class="buy">Купить</a>
+                        <a href="#" class="buy" data-model="wow">Купить</a>
                     </div>
                     <article class="desc">
                         Часы, которые показывают правильное время только в одной точке
                     </article>
                 </section>
-                <section class="clock-section">
+                <section class="clock-section" id="section-3">
                     <div class="clock">
                         <div class="edit-btn" id="edit-btn">✎ Изменить</div>
                         <div class="clockhands">
@@ -142,7 +142,7 @@
                     <h4>Свой вариант</h4>
                     <div class="price-and-btn">
                         <mark class="price">799 ₽</mark>
-                        <a href="#" class="buy">Купить</a>
+                        <a href="#" class="buy" data-model="custom">Купить</a>
                     </div>
                     <article class="desc">
                         Часы с циферблатом по Вашему заказу.
@@ -156,6 +156,20 @@
         <footer>
             CLOCK-ART &copy; 2020
         </footer>
+        <div class="buy-popup hide" id="buy-popup">
+            <div class="content">
+                <h1>Мы ничего не продаём</h1>
+                <p class="label">
+                    Но если будем, то сообщим о старте продаж. Оставьте свои контакты в любом виде:
+                </p>
+                <textarea></textarea><br />
+                <button id="ok">Ок</button>
+                <h2>Что происходит?</h2>
+                <p>
+                    Мы не уверены, что запуск производства часов не станет убытчным. Мы должны убедиться, что у нас будут покупатели.
+                </p>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>

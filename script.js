@@ -54,6 +54,7 @@ function seconds(windowWasBlurred = false) {
 }
 function minutes(windowWasBlurred = false) {
     const min = (new Date()).getMinutes() / 60 * 360 + 6;
+    // const min = 180;
     if (((new Date()).getMinutes() == 0 && (new Date()).getSeconds() == 0)) {
         $regularMinuteHand.forEach(hand => {
             hand.style.transform = `rotate(360deg)`;
@@ -106,7 +107,6 @@ function hours(windowWasBlurred = false) {
             hoursTimeout = setTimeout(() => { requestAnimationFrame(hours) }, 3600000);
         }, 3600000);
     } else {
-        console.log("opa:", hou);
         if (windowWasBlurred) {
             $regularHourHand.forEach(hand => {
                 hand.style.transition = `none`;
@@ -128,7 +128,6 @@ $regularHourHand.forEach(hand => {
     hand.style.transition = `none`;
     hand.offsetHeight;
     hand.style.transform = `rotate(${hourDegs}deg)`;
-    console.log(hourDegs);
     hand.offsetHeight;
     hand.style.transition = `all linear 3600s`;
     hand.offsetHeight;
@@ -156,53 +155,20 @@ $regularSecondHand.forEach(hand => {
 });
 
 let windowWasBlurred = false, oldSec = 0;
+window.addEventListener('blur', () => {
+    // clearTimeout(secondsTimeout);
+    // clearTimeout(minutesTimeout);
+    // clearTimeout(hoursTimeout);
+});
 window.addEventListener('focus', () => {
-    windowWasBlurred = true;
-    const sec = (new Date()).getSeconds() / 60 * 360;
-    if (windowWasBlurred) {
-        windowWasBlurred = false;
-        console.log('opaaa');
+    // clearTimeout(secondsTimeout);
+    // secondsTimeout = setTimeout(() => { requestAnimationFrame(() => { seconds(true) }) }, 1000);
 
-        clearTimeout(secondsTimeout);
-        secondsTimeout = setTimeout(() => { requestAnimationFrame(() => { seconds(true) }) }, 1000);
-        // $regularSecondHand.forEach(hand => {
-        //     hand.style.transition = `none`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${sec-6}deg)`;
-        //     hand.offsetHeight;
-        //     hand.style.transition = `all linear 1s`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${sec}deg)`;
-        //     secondsTimeout = setTimeout(() => { requestAnimationFrame(seconds) }, 1000);
-        // });
+    // clearTimeout(minutesTimeout);
+    // minutesTimeout = setTimeout(() => { requestAnimationFrame(() => { minutes(true) }) }, 60000);
 
-        clearTimeout(minutesTimeout);
-        const min = (new Date()).getMinutes() / 60 * 360 + 6;
-        minutesTimeout = setTimeout(() => { requestAnimationFrame(() => { minutes(true) }) }, 60000);
-        // $regularMinuteHand.forEach(hand => {
-        //     hand.style.transition = `none`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${min-6}deg)`;
-        //     hand.offsetHeight;
-        //     hand.style.transition = `all linear 60s`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${min}deg)`;
-        //     minutesTimeout = setTimeout(() => { requestAnimationFrame(minutes) }, 60000);
-        // });
-
-        clearTimeout(hoursTimeout);
-        const hou = (new Date()).getHours() % 12 / 12 * 360 + ((new Date()).getMinutes() / 60 * 360 + (new Date()).getSeconds() / 60 * 6) / 12;
-        hoursTimeout = setTimeout(() => { requestAnimationFrame(() => { hours(true) }) }, 3600000);
-        // $regularHourHand.forEach(hand => {
-        //     hand.style.transition = `none`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${hou-30}deg)`;
-        //     hand.offsetHeight;
-        //     hand.style.transition = `all linear 3600s`;
-        //     hand.offsetHeight;
-        //     hand.style.transform = `rotate(${hou}deg)`;
-        // });
-    }
+    // clearTimeout(hoursTimeout);
+    // hoursTimeout = setTimeout(() => { requestAnimationFrame(() => { hours(true) }) }, 3600000);
 });
 
 // requestAnimationFrame(function months() {
@@ -381,3 +347,47 @@ for (let i = 0; i < 12; i++) {
     $label.style.transform = `rotate(${i * 30 - 90}deg)`;
     $superHours.appendChild($label);
 }
+
+const $clockWrapper = document.getElementById('clock-wrapper');
+const $section1 = document.getElementById('section-1');
+const $section2 = document.getElementById('section-2');
+const $section3 = document.getElementById('section-3');
+const sections = [$section1, $section2, $section3];
+// $clockWrapper.scrollLeft = window.innerWidth * 0.175 + 475 - window.innerWidth / 2;
+// $clockWrapper.scrollLeft = window.innerWidth * 0.175 ;// - window.innerWidth / 2;
+let i = 1;
+$clockWrapper.scrollLeft = sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2;
+const xs = [];
+for (i = 0; i < sections.length; i++) {
+    xs.push(sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2)
+}
+
+const closest = (array, goal) => {
+    return array.reduce(function(prev, curr) {
+        return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
+    });
+};
+
+
+document.addEventListener('touchend', () => {
+    // $clockWrapper.scrollLeft = closest(xs, $clockWrapper.scrollLeft);
+    $clockWrapper.scroll({
+        top: 0,
+        left: closest(xs, $clockWrapper.scrollLeft),
+        behavior: 'smooth'
+    });
+});
+
+const $buyPopup = document.getElementById('buy-popup');
+const $okButton = document.getElementById('ok');
+const $buyButtons = document.querySelectorAll('.buy');
+$buyButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        console.log(this.getAttribute('data-model'));
+        $buyPopup.classList.remove('hide');
+    });
+});
+
+$okButton.addEventListener('click', function() {
+    $buyPopup.classList.add('hide');
+});

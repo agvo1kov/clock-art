@@ -45,7 +45,7 @@ header h1.logo {
 h1.logo-white {
     z-index: 10;
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     right: 0;
     margin: 0 auto 0;
@@ -189,6 +189,7 @@ main section.clock-section {
         width: 100vw;
         overflow-x: scroll;
         overflow-y: hidden;
+        -webkit-overflow-scrolling: auto;
     }
 
     main {
@@ -307,51 +308,82 @@ main section.clock-section article.desc {
     transform: rotate(306deg) translate(0, -87px) rotate(-306deg);
 }
 
+.test .digit {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    background-image: url(./test-min.png);
+    background-size: cover;
+}
+
 .digit.digit-1 {
+    width: 11px;
     transform: rotate(30deg) translate(0, -125px) rotate(-30deg);
 }
 
 .digit.digit-2 {
+    width: 16.5px;
+    background-position-x: -11px;
     transform: rotate(60deg) translate(0, -125px) rotate(-60deg);
 }
 
 .digit.digit-3 {
+    width: 16.5px;
+    background-position-x: -28px;
     transform: rotate(90deg) translate(0, -125px) rotate(-90deg);
 }
 
 .digit.digit-4 {
+    width: 18px;
+    background-position-x: -44.5px;
     transform: rotate(120deg) translate(0, -125px) rotate(-120deg);
 }
 
 .digit.digit-5 {
+    width: 17.5px;
+    background-position-x: -63px;
     transform: rotate(150deg) translate(0, -125px) rotate(-150deg);
 }
 
 .digit.digit-6 {
+    width: 16.5px;
+    background-position-x: -81px;
     transform: rotate(180deg) translate(0, -125px) rotate(-180deg);
 }
 
 .digit.digit-7 {
+    width: 17.5px;
+    background-position-x: -98px;
     transform: rotate(210deg) translate(0, -125px) rotate(-210deg);
 }
 
 .digit.digit-8 {
+    width: 16.5px;
+    background-position-x: -116px;
     transform: rotate(240deg) translate(0, -125px) rotate(-240deg);
 }
 
 .digit.digit-9 {
+    width: 17px;
+    background-position-x: -132.5px;
     transform: rotate(270deg) translate(0, -125px) rotate(-270deg);
 }
 
 .digit.digit-10 {
+    width: 30px;
+    background-position-x: -150px;
     transform: rotate(300deg) translate(0, -125px) rotate(-300deg);
 }
 
 .digit.digit-11 {
+    width: 25px;
+    background-position-x: -180px;
     transform: rotate(330deg) translate(0, -125px) rotate(-330deg);
 }
 
 .digit.digit-12 {
+    width: 32px;
+    background-position-x: -205px;
     transform: translate(0, -125px)
 }
 
@@ -483,6 +515,7 @@ main section.clock-section article.desc {
     border-radius: 3px;
     transform-origin: 50% 100%; /* bottom center; */
     /* transform: translate(148px, 30px); */
+    overflow: hidden;
 }
 
 .clock .clockhands .hand.hour {
@@ -502,6 +535,8 @@ main section.clock-section article.desc {
 }
 
 .clock .clockhands .hand.minute {
+    position: absolute;
+    z-index: 30;
     top: 42.8px;
     left: 143.5px;
     width: 13px;
@@ -711,9 +746,12 @@ article.delivery h3 {
     /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
 }
 
-/* .shadows {
-    transform: translate(10px, 10px);
-} */
+.shadows {
+    position: relative;
+    z-index: 50;
+    height: 300px;
+    /* transform: translate(10px, 10px); */
+}
 
 .shadows .shadow-piptyk {
     position: relative;
@@ -755,6 +793,8 @@ article.delivery h3 {
     /* background: gray !important; */
     /* background: rgba(0, 0, 0, 0.06) !important;
     box-shadow: rgba(0, 0, 0, 0.12) 0 0 3px; */
+    z-index: 31;
+    position: absolute;
     background-color: transparent;
     background-image: url(./minute-hand.png);
     background-size: contain;
@@ -944,4 +984,81 @@ footer {
     transform-origin: 50% 81%;
     filter: grayscale(100%) blur(2px);
     opacity: 0.2;
+}
+
+.buy-popup {
+    z-index: 70;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    height: 300px;
+    width: 100vw;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 150px;
+    transition: all ease-out 200ms;
+}
+
+.buy-popup .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 600px;
+    margin: auto;
+}
+
+.buy-popup .content h1 {
+    padding: 10px 0 3px;
+}
+
+.buy-popup .content textarea {
+    position: relative;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 3px;
+}
+
+.buy-popup .content h2 {
+    padding-top: 20px;
+}
+
+.buy-popup .content p {
+    font-size: 15px;
+    color: #48484a;
+}
+
+.buy-popup .content button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.hide {
+    bottom: -300px;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 150px;
+}
+
+@media only screen and (max-device-width: 1125px) {
+    .buy-popup {
+        height: 350px;
+    }
+
+    .buy-popup .content {
+        width: 100%;
+    }
+
+    .hide {
+        bottom: -400px;
+    }
+}
+
+
+@media only screen and (max-device-width: 340px) {
+    main h4 {
+        padding-top: 0 !important;
+    }
 }
