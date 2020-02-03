@@ -186,31 +186,37 @@ main section.clock-section {
 
 @media only screen and (max-device-width: 1125px) {
     .main-wrapper {
-        width: 100vw;
-        overflow-x: auto;
+        /* width: 100vw; */
+        overflow-x: scroll;
         overflow-y: hidden;
-        -webkit-overflow-scrolling: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        /* scroll-padding: 0 50%; */
+        /* padding: 1rem; */
+    }
+
+    section.clock-section {
+        scroll-snap-align: center;
+        width: 300px;
+        /* margin: 0 20px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     main {
         /* box-sizing: border-box; */
-        display: flex;
+        
         /* justify-content: ; */
         width: 930px;
         /* width: auto; */
         /* padding: 0; */
         padding: 0 20vw;
         margin-top: 20px;
+        display: flex;
         justify-content: space-between;
         align-items: flex-start;
-    }
-
-    main section.clock-section {
-        width: 300px;
-        /* margin: 0 20px; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
     }
 }
 
