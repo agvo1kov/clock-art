@@ -188,7 +188,7 @@ main section.clock-section {
     .main-wrapper {
         /* width: 100vw; */
         overflow-x: scroll;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         scroll-padding: 50% 10px;
