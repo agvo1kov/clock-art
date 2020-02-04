@@ -1101,7 +1101,7 @@ footer {
 
 @media only screen and (max-device-width: 1125px) {
     .photogallery img {
-        display: inline-block;
+        align-self: center;
         height: auto;
         width: 100vw;
         margin: 0;
