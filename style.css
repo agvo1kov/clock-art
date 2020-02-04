@@ -326,6 +326,7 @@ main section.clock-section article.desc {
     height: 40px;
     background-image: url(./test-min.png);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .custom .digit {
@@ -342,68 +343,68 @@ main section.clock-section article.desc {
 }
 
 .digit.digit-2 {
-    width: 16.5px;
+    width: 19px;
     background-position-x: -11px;
     transform: rotate(60deg) translate(0, -125px) rotate(-60deg);
 }
 
 .digit.digit-3 {
-    width: 16.5px;
-    background-position-x: -28px;
+    width: 18px;
+    background-position-x: -29px;
     transform: rotate(90deg) translate(0, -125px) rotate(-90deg);
 }
 
 .digit.digit-4 {
-    width: 18px;
-    background-position-x: -44.5px;
+    width: 19px;
+    background-position-x: -47px;
     transform: rotate(120deg) translate(0, -125px) rotate(-120deg);
 }
 
 .digit.digit-5 {
-    width: 17.5px;
-    background-position-x: -63px;
+    width: 20px;
+    background-position-x: -66px;
     transform: rotate(150deg) translate(0, -125px) rotate(-150deg);
 }
 
 .digit.digit-6 {
-    width: 16.5px;
-    background-position-x: -81px;
+    width: 18px;
+    background-position-x: -85px;
     transform: rotate(180deg) translate(0, -125px) rotate(-180deg);
 }
 
 .digit.digit-7 {
-    width: 17.5px;
-    background-position-x: -98px;
+    width: 19px;
+    background-position-x: -104px;
     transform: rotate(210deg) translate(0, -125px) rotate(-210deg);
 }
 
 .digit.digit-8 {
-    width: 16.5px;
-    background-position-x: -116px;
+    width: 18px;
+    background-position-x: -123px;
     transform: rotate(240deg) translate(0, -125px) rotate(-240deg);
 }
 
 .digit.digit-9 {
-    width: 17px;
-    background-position-x: -132.5px;
+    width: 18px;
+    background-position-x: -140px;
     transform: rotate(270deg) translate(0, -125px) rotate(-270deg);
 }
 
 .digit.digit-10 {
-    width: 30px;
-    background-position-x: -150px;
+    width: 32px;
+    background-position-x: -158px;
     transform: rotate(300deg) translate(0, -125px) rotate(-300deg);
 }
 
 .digit.digit-11 {
     width: 25px;
-    background-position-x: -180px;
+    background-position-x: -190px;
     transform: rotate(330deg) translate(0, -125px) rotate(-330deg);
 }
 
 .digit.digit-12 {
-    width: 32px;
-    background-position-x: -205px;
+    width: 34px;
+    background-position-x: -215px;
     transform: translate(0, -125px)
 }
 
