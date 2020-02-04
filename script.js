@@ -84,6 +84,10 @@ $regularSecondHand.forEach(hand => {
     hand.offsetHeight;
     requestAnimationFrame(seconds);
 });
+$calendarMonthHand.style.transform = `rotate(${dayDegs}deg)`;
+$calendarShadowMonthHand.style.transform = `rotate(${dayDegs}deg)`;
+$calendarDayHand.style.transform = `rotate(${monthDegs}deg)`;
+$calendarShadowDayHand.style.transform = `rotate(${monthDegs}deg)`;
 
 // requestAnimationFrame(function months() {
 //     $calendarMonthHand.style.transform = `rotate(${monthDegs}deg)`;

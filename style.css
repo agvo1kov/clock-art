@@ -184,6 +184,12 @@ main section.clock-section {
     width: 300px;
 }
 
+.main-wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 1440px;
+}
+
 @media only screen and (max-device-width: 1125px) {
     .main-wrapper {
         /* width: 100vw; */
