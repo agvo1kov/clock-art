@@ -239,32 +239,32 @@ editBtn.addEventListener('click', () => {
     });
 });
 
-const $superSeconds = document.getElementById('super-seconds');
-for (let i = 0; i < 60; i++) {
-    const $label = document.createElement('div');
-    $label.classList.add('label');
-    $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${60-i < 60 ? 60-i : 0}</div>`;
-    $label.style.transform = `rotate(${i * 6 - 90}deg)`;
-    $superSeconds.appendChild($label);
-}
+// const $superSeconds = document.getElementById('super-seconds');
+// for (let i = 0; i < 60; i++) {
+//     const $label = document.createElement('div');
+//     $label.classList.add('label');
+//     $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${60-i < 60 ? 60-i : 0}</div>`;
+//     $label.style.transform = `rotate(${i * 6 - 90}deg)`;
+//     $superSeconds.appendChild($label);
+// }
 
-const $superMinutes = document.getElementById('super-minutes');
-for (let i = 0; i < 60; i++) {
-    const $label = document.createElement('div');
-    $label.classList.add('label');
-    $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${60-i < 60 ? 60-i : 0}</div>`;
-    $label.style.transform = `rotate(${i * 6 - 90}deg)`;
-    $superMinutes.appendChild($label);
-}
+// const $superMinutes = document.getElementById('super-minutes');
+// for (let i = 0; i < 60; i++) {
+//     const $label = document.createElement('div');
+//     $label.classList.add('label');
+//     $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${60-i < 60 ? 60-i : 0}</div>`;
+//     $label.style.transform = `rotate(${i * 6 - 90}deg)`;
+//     $superMinutes.appendChild($label);
+// }
 
-const $superHours = document.getElementById('super-hours');
-for (let i = 0; i < 12; i++) {
-    const $label = document.createElement('div');
-    $label.classList.add('label');
-    $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${12-i}</div>`;
-    $label.style.transform = `rotate(${i * 30 - 90}deg)`;
-    $superHours.appendChild($label);
-}
+// const $superHours = document.getElementById('super-hours');
+// for (let i = 0; i < 12; i++) {
+//     const $label = document.createElement('div');
+//     $label.classList.add('label');
+//     $label.innerHTML = `<div style='transform: rotate(${90}deg)'>${12-i}</div>`;
+//     $label.style.transform = `rotate(${i * 30 - 90}deg)`;
+//     $superHours.appendChild($label);
+// }
 
 const $clockWrapper = document.getElementById('clock-wrapper');
 const $section1 = document.getElementById('section-1');
@@ -309,3 +309,34 @@ $buyButtons.forEach((button) => {
 $okButton.addEventListener('click', function() {
     $buyPopup.classList.add('hide');
 });
+
+let isMobile = false;
+
+const $photoviewer = document.getElementById('photoviewer');
+$photoviewer.addEventListener('click', () => {
+    $photoviewer.style.display = 'none';
+});
+
+const $photos = document.querySelectorAll('.photogallery > .photo');
+const $image = document.getElementById('image');
+$photos.forEach(($photo) => {
+    $photo.addEventListener('click', function() {
+        if (isMobile) {
+            $image.setAttribute('src', this.getAttribute('src'));
+            $photoviewer.style.display = 'flex';
+        }
+    });
+});
+
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        isMobile = false;
+    } else {
+        isMobile = true;
+    }
+  }
+  
+  var x = window.matchMedia("only screen and (max-device-width: 1125px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
