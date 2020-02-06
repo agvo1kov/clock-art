@@ -343,7 +343,7 @@ const $image = document.getElementById('image');
 $photos.forEach(($photo) => {
     $photo.addEventListener('click', function() {
         if (isMobile) {
-            $image.setAttribute('src', this.getAttribute('src'));
+            $image.setAttribute('src', this.getAttribute('src').replace('/min', ''));
             $photoviewer.style.display = 'flex';
         }
     });
