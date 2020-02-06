@@ -324,7 +324,7 @@ $buyButtons.forEach((button) => {
 
 const $contact = document.getElementById('contact');
 $okButton.addEventListener('click', function() {
-    const contactText = $contact.innerText;
+    const contactText = $contact.value;
     const model = localStorage.getItem('model');
     let url = new URL('https://csscolor.ru/clock-art/contacts.php');
     url.searchParams.set('variant', model);
