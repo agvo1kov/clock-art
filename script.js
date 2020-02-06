@@ -305,13 +305,13 @@ $buyButtons.forEach((button) => {
 
         var xhr = new XMLHttpRequest();
         if (model == '1') {
-            xhr.open('GET', 'http://csscolor.ru/clock-art/variant1.php', false);
+            xhr.open('GET', 'https://csscolor.ru/clock-art/variant1.php', false);
         }
         if (model == '2') {
-            xhr.open('GET', 'http://csscolor.ru/clock-art/variant2.php', false);
+            xhr.open('GET', 'https://csscolor.ru/clock-art/variant2.php', false);
         }
         if (model == '3') {
-            xhr.open('GET', 'http://csscolor.ru/clock-art/variant3.php', false);
+            xhr.open('GET', 'https://csscolor.ru/clock-art/variant3.php', false);
         }
         xhr.send();
 
