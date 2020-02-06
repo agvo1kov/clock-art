@@ -322,9 +322,10 @@ $buyButtons.forEach((button) => {
 const $contact = document.getElementById('contact');
 $okButton.addEventListener('click', function() {
     const contactText = $contact.innerText;
+    const model = this.getAttribute('data-model');
     let url = new URL('https://csscolor.ru/clock-art/constants.php');
     url.searchParams.set('variant', model);
-    url.searchParams.set('text', modcontactTextel);
+    url.searchParams.set('text', contactText);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, false);
     xhr.send();
