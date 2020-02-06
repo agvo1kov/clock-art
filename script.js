@@ -319,7 +319,15 @@ $buyButtons.forEach((button) => {
     });
 });
 
+const $contact = document.getElementById('contact');
 $okButton.addEventListener('click', function() {
+    const contactText = $contact.innerText;
+    let url = new URL('https://csscolor.ru/clock-art/constants.php');
+    url.searchParams.set('variant', model);
+    url.searchParams.set('text', modcontactTextel);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, false);
+    xhr.send();
     $buyPopup.classList.add('hide');
 });
 
