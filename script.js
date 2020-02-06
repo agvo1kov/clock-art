@@ -306,12 +306,15 @@ $buyButtons.forEach((button) => {
         var xhr = new XMLHttpRequest();
         if (model == '1') {
             xhr.open('GET', 'https://csscolor.ru/clock-art/variant1.php', false);
+            localStorage.setItem('model', '1');
         }
         if (model == '2') {
             xhr.open('GET', 'https://csscolor.ru/clock-art/variant2.php', false);
+            localStorage.setItem('model', '2');
         }
         if (model == '3') {
             xhr.open('GET', 'https://csscolor.ru/clock-art/variant3.php', false);
+            localStorage.setItem('model', '3');
         }
         xhr.send();
 
@@ -322,8 +325,8 @@ $buyButtons.forEach((button) => {
 const $contact = document.getElementById('contact');
 $okButton.addEventListener('click', function() {
     const contactText = $contact.innerText;
-    const model = this.getAttribute('data-model');
-    let url = new URL('https://csscolor.ru/clock-art/constants.php');
+    const model = localStorage.getItem('model');
+    let url = new URL('https://csscolor.ru/clock-art/contacts.php');
     url.searchParams.set('variant', model);
     url.searchParams.set('text', contactText);
     var xhr = new XMLHttpRequest();
