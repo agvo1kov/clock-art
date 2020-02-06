@@ -301,7 +301,20 @@ const $okButton = document.getElementById('ok');
 const $buyButtons = document.querySelectorAll('.buy');
 $buyButtons.forEach((button) => {
     button.addEventListener('click', function() {
-        console.log(this.getAttribute('data-model'));
+        const model = this.getAttribute('data-model');
+
+        var xhr = new XMLHttpRequest();
+        if (model == '1') {
+            xhr.open('GET', 'http://csscolor.ru/clock-art/variant1.php', false);
+        }
+        if (model == '2') {
+            xhr.open('GET', 'http://csscolor.ru/clock-art/variant2.php', false);
+        }
+        if (model == '3') {
+            xhr.open('GET', 'http://csscolor.ru/clock-art/variant3.php', false);
+        }
+        xhr.send();
+
         $buyPopup.classList.remove('hide');
     });
 });

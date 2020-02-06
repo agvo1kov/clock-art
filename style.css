@@ -1094,9 +1094,10 @@ footer {
     justify-content: space-evenly;
 }
 
-.photogallery img {
+.photogallery > img {
     height: 300px;
     margin: 8px 0;
+    cursor: pointer;
 }
 
 @media only screen and (max-device-width: 1125px) {
