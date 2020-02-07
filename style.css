@@ -154,6 +154,13 @@ h2.slogan-blur {
     }
 }
 
+@media only screen and (max-device-width: 340px) {
+    header h1.logo, header h1.logo-blur, h1.logo-white {
+        font-size: 42px;
+        margin: 5px 0 0;
+    }
+}
+
 h2.slogan-blur .circle {
     position: absolute;
     width: 40px;
@@ -174,12 +181,6 @@ h1.logo-blur .circle {
     /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
 }
 
-main {
-    padding: 70px 0 0;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 main section.clock-section {
     width: 300px;
 }
@@ -188,6 +189,9 @@ main section.clock-section {
     position: relative;
     margin: auto;
     max-width: 1440px;
+    padding: 70px 0 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-device-width: 1125px) {
@@ -229,6 +233,7 @@ main section.clock-section {
 
 @media only screen and (max-device-width: 340px) {
     main {
+        padding: 0px 0 0 !important;
         width: 740px;
     }
 

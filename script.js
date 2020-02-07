@@ -271,11 +271,9 @@ const $section1 = document.getElementById('section-1');
 const $section2 = document.getElementById('section-2');
 const $section3 = document.getElementById('section-3');
 const sections = [$section1, $section2, $section3];
-const clockWrapperPadding = (window.innerWidth - 300) / 2;
-$section1.style.marginLeft = `${clockWrapperPadding}px`;
-$section3.style.paddingRight = `${clockWrapperPadding}px`;
 let i = 1;
-$clockWrapper.scrollLeft = sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2;
+// $clockWrapper.scrollLeft = sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2;
+// const clockWrapperPadding = ;
 
 const $buyPopup = document.getElementById('buy-popup');
 const $okButton = document.getElementById('ok');
@@ -284,19 +282,25 @@ $buyButtons.forEach((button) => {
     button.addEventListener('click', function() {
         const model = this.getAttribute('data-model');
 
-        var xhr = new XMLHttpRequest();
+        const from = findGetParameter('from');
+
+        let url = new URL('https://csscolor.ru/clock-art/variant1.php');
         if (model == '1') {
-            xhr.open('GET', 'https://csscolor.ru/clock-art/variant1.php', false);
+            url = new URL('https://csscolor.ru/clock-art/variant1.php');
             localStorage.setItem('model', '1');
         }
         if (model == '2') {
-            xhr.open('GET', 'https://csscolor.ru/clock-art/variant2.php', false);
+            url = new URL('https://csscolor.ru/clock-art/variant2.php');
             localStorage.setItem('model', '2');
         }
         if (model == '3') {
-            xhr.open('GET', 'https://csscolor.ru/clock-art/variant3.php', false);
+            url = new URL('https://csscolor.ru/clock-art/variant3.php');
             localStorage.setItem('model', '3');
         }
+        url.searchParams.set('from', from);
+
+        xhr.open('GET', url, false);
+        var xhr = new XMLHttpRequest();
         xhr.send();
 
         $buyPopup.classList.remove('hide');
@@ -307,9 +311,11 @@ const $contact = document.getElementById('contact');
 $okButton.addEventListener('click', function() {
     const contactText = $contact.value;
     const model = localStorage.getItem('model');
+    const from = findGetParameter('from');
     let url = new URL('https://csscolor.ru/clock-art/contacts.php');
     url.searchParams.set('variant', model);
     url.searchParams.set('text', contactText);
+    url.searchParams.set('from', from);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, false);
     xhr.send();
@@ -338,11 +344,46 @@ $photos.forEach(($photo) => {
 function myFunction(x) {
     if (x.matches) { // If media query matches
         isMobile = false;
+        const clockWrapperPadding = (window.innerWidth - 300) / 2;
+        $section1.style.marginLeft = `${clockWrapperPadding}px`;
+        $section3.style.paddingRight = `${clockWrapperPadding}px`;
+        $clockWrapper.scrollLeft = $section1.offsetWidth + $section2.offsetWidth / 2;
+        
     } else {
         isMobile = true;
+        $section1.style.marginLeft = `0px`;
+        $section3.style.paddingRight = `0px`;
+        $clockWrapper.scrollLeft = 0;
     }
   }
   
-  var x = window.matchMedia("only screen and (max-device-width: 1125px)")
+  var x = window.matchMedia("only screen and (max-device-width: 1125px)");
   myFunction(x) // Call listener function at run time
   x.addListener(myFunction) // Attach listener function on state changes
+
+  function myOtherFunction(x) {
+    if (x.matches) { // If media query matches
+        isMobile = false;
+        // const clockWrapperPadding = (window.innerWidth - 300) / 2;
+        $section1.style.marginLeft = `${20}px`;
+        $section3.style.paddingRight = `${20}px`;
+        $clockWrapper.scrollLeft = 0;   
+    }
+  }
+
+  var iphone5 = window.matchMedia("only screen and (max-device-width: 340px)");
+  myOtherFunction(iphone5) // Call listener function at run time
+  iphone5.addListener(myOtherFunction) // Attach listener function on state changes
+
+  function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
