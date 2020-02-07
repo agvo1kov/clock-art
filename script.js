@@ -284,7 +284,7 @@ $buyButtons.forEach((button) => {
 
         const from = findGetParameter('from');
 
-        let url = new URL();
+        let url = new URL('https://csscolor.ru/clock-art/');
         if (model == '1') {
             url = new URL('https://csscolor.ru/clock-art/variant1.php');
             localStorage.setItem('model', '1');
