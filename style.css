@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400&display=swap');
 
 * {
@@ -11,14 +12,6 @@
 
 header {
     text-align: center;
-}
-
-.hand {
-    /* opacity: 0; */
-}
-
-.piptyk {
-    /* transform: scale(0.15); */
 }
 
 .logo-wrapper {
@@ -60,7 +53,6 @@ h1.logo-blur {
     margin: 0 auto 0 !important;
     width: 400px;
     display: inline-block;
-    /* background: green; */
     color: transparent;
     background: white;
     filter: blur(8px);
@@ -74,18 +66,9 @@ h1.logo-blur {
 
 header h2.slogan, header h2.slogan-blur, h2.slogan-white {
     font-size: 18px;
-    /* font-size: 13px; */
     font-weight: 100;
-    /* font-family: 'Kurale', serif; */
-    /* font-family: 'Kelly Slab', cursive; */
-    /* font-style: italic; */
-    /* font-family: 'Poiret One', cursive; */
     font-family: 'Marck Script', cursive;
     word-spacing: -0.8px;
-    /* color: #d1d1d6; */
-    /* color: #c7c7cc; */
-    /* color: #aeaeb2; */
-    /* color: #636366; */
 }
 
 h2.slogan {
@@ -103,7 +86,6 @@ h2.slogan-white {
     margin: auto;
     width: 580px;
     display: inline-block;
-    /* background: green; */
     color: transparent;
     background: white;
     overflow: hidden;
@@ -118,7 +100,6 @@ h2.slogan-blur {
     margin: auto;
     width: 580px;
     display: inline-block;
-    /* background: green; */
     color: transparent;
     background: white;
     filter: blur(8px);
@@ -162,7 +143,6 @@ h2.slogan-blur .circle {
     border-radius: 100%;
     background: rgb(238, 238, 238);
     box-shadow: inset 0px 0px 20px rgba(150, 150, 150, 1);
-    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
 }
 
 h1.logo-blur .circle {
@@ -172,7 +152,6 @@ h1.logo-blur .circle {
     border-radius: 100%;
     background: rgb(238, 238, 238);
     box-shadow: inset 0px 0px 20px rgba(150, 150, 150, 0.9);
-    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
 }
 
 main section.clock-section {
@@ -195,34 +174,17 @@ main section.clock-section {
         scroll-snap-type: x mandatory;
         justify-content: flex-start;
         padding-top: 12px;
-        /* scroll-padding: 50% 0; */
-        /* padding: 1rem; */
         width: 100vw;
-        /* display: flex; */
-        /* justify-content: space-evenly; */
-        /* align-items: flex-start; */
     }
 
     section.clock-section {
         scroll-snap-align: center;
         width: 300px;
         margin: 0 2px;
-        /* margin: 0 3px; */
-        /* margin: 0 20px; */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    /* main {
-        width: auto;
-        padding: 0;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        
-    } */
 }
 
 @media only screen and (max-device-width: 340px) {
@@ -243,7 +205,6 @@ main section.clock-section {
 main section.clock-section article.desc {
     margin-top: 20px;
     font-size: 16px;
-    /* text-align: left; */
     line-height: 23px;
     word-spacing: 4px;
 }
@@ -266,29 +227,23 @@ main section.clock-section article.desc {
     width: 40px;
     height: 40px;
     margin: auto;
-    /* background: yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 29px;
 }
 
 .clock.test .digit {
     font-family: 'Oswald', sans-serif;
-    /* font-family: 'Lobster Two', cursive; */
-    /* font-size: 20px; */
 }
 
 .clock.calendar .digit {
     font-family: 'Lobster', cursive;
-    /* font-family: 'Lobster Two', cursive; */
     font-size: 20px;
 }
 
 .clock.calendar .weekday {
     font-family: 'Oswald', sans-serif;
-    /* font-family: 'Lobster Two', cursive; */
     font-size: 15px;
 }
 
@@ -333,7 +288,6 @@ main section.clock-section article.desc {
     position: absolute;
     z-index: 170;
     height: 40px;
-    /* background-image: url(./test-min.png); */
     background-size: cover;
 }
 
@@ -409,19 +363,19 @@ main section.clock-section article.desc {
 }
 
 .clock.calendar .digit.digit-1 {
-    transform: rotate(30deg) translate(0, -135px); /* rotate(-30deg); */
+    transform: rotate(30deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-2 {
-    transform: rotate(60deg) translate(0, -135px); /* rotate(-60deg); */
+    transform: rotate(60deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-3 {
-    transform: rotate(90deg) translate(0, -135px); /* rotate(-90deg); */
+    transform: rotate(90deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-4 {
-    transform: rotate(120deg) translate(0, -135px); /* rotate(-120deg); */
+    transform: rotate(120deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-5 {
@@ -437,19 +391,19 @@ main section.clock-section article.desc {
 }
 
 .clock.calendar .digit.digit-8 {
-    transform: rotate(240deg) translate(0, -135px); /* rotate(-240deg); */
+    transform: rotate(240deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-9 {
-    transform: rotate(270deg) translate(0, -135px); /* rotate(-270deg); */
+    transform: rotate(270deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-10 {
-    transform: rotate(300deg) translate(0, -135px); /* rotate(-300deg); */
+    transform: rotate(300deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-11 {
-    transform: rotate(330deg) translate(0, -135px); /* rotate(-330deg); */
+    transform: rotate(330deg) translate(0, -135px);
 }
 
 .clock.calendar .digit.digit-12 {
@@ -476,7 +430,6 @@ main section.clock-section article.desc {
 }
 
 .edit-btn {
-    /* display: none; */
     z-index: 50;
     position: absolute;
     top: 0;
@@ -523,12 +476,10 @@ main section.clock-section article.desc {
     width: 10px;
     height: 10px;
     border-radius: 30px;
-    /* background: gold; */
     background-color: transparent;
     background-image: url(./piptyk.png);
     background-size: contain;
     background-position: center;
-    /* opacity: 0; */
 }
 
 .clock .clockhands .hand {
@@ -537,8 +488,7 @@ main section.clock-section article.desc {
     width: 4px;
     height: 120px;
     border-radius: 3px;
-    transform-origin: 50% 100%; /* bottom center; */
-    /* transform: translate(148px, 30px); */
+    transform-origin: 50% 100%;
     overflow: hidden;
 }
 
@@ -554,8 +504,6 @@ main section.clock-section article.desc {
     background-size: contain;
     background-position: center;
     transform-origin: 50% 81%;
-    /* display: none; */
-    /* animation: clockround 43200s linear 0s infinite forwards; */
 }
 
 .clock .clockhands .hand.minute {
@@ -571,8 +519,6 @@ main section.clock-section article.desc {
     background-size: contain;
     background-position: center;
     transform-origin: 50% 85.8%;
-    /* display: none; */
-    /* animation: clockround 3600s linear 0s infinite forwards; */
 }
 
 .clock .clockhands .hand.second {
@@ -581,7 +527,6 @@ main section.clock-section article.desc {
     left: 146px;
     width: 6px;
     height: 145px;
-    /* background: #ff3b30; */
     background-color: transparent;
     background-image: url(./second-hand.png);
     background-size: contain;
@@ -590,7 +535,6 @@ main section.clock-section article.desc {
     transform: rotate(0deg);
     background-repeat: no-repeat;
     transition: all linear 1s;
-    /* animation: clockround 60s linear 0s infinite forwards; */
 }
 
 .clock.super .triangle {
@@ -612,7 +556,6 @@ main section.clock-section article.desc {
     width: 4px;
     height: 120px;
     border-radius: 3px;
-    /* transform: translate(148px, 30px); */
     transform-origin: 50% 50%;
 }
 
@@ -624,15 +567,11 @@ main section.clock-section article.desc {
     border-radius: 10px;
     transform: rotate(60deg);
     background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
     background-image: none;
     background-size: contain;
     background-position: center;
-    /* transform-origin: 50% 81%; */
     border-radius: 200px;
     transition: all linear 1s;
-    /* display: none; */
-    /* animation: clockround 43200s linear 0s infinite forwards; */
 }
 
 .clock.super .clockhands .hand.minute {
@@ -642,15 +581,11 @@ main section.clock-section article.desc {
     height: 220px;
     transform: rotate(110deg);
     background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
     background-image: none;
     background-size: contain;
     background-position: center;
-    /* transform-origin: 50% 85.8%; */
     border-radius: 150px;
     transition: all linear 60s;
-    /* display: none; */
-    /* animation: clockround 3600s linear 0s infinite forwards; */
 }
 
 .clock.super .clockhands .hand.second {
@@ -659,18 +594,14 @@ main section.clock-section article.desc {
     left: 58px;
     width: 184px;
     height: 184px;
-    /* background: #ff3b30; */
     background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px; */
     background-image: none;
     background-size: contain;
     background-position: center;
-    /* transform-origin: 50% 71%; */
     transform: rotate(0deg);
     background-repeat: no-repeat;
     transition: all linear 1s;
     border-radius: 100px;
-    /* animation: clockround 60s linear 0s infinite forwards; */
 }
 
 .clock.super .clockhands .hand.hour .label > div {
@@ -716,7 +647,6 @@ mark.price {
     font-size: 17px;
     margin: 20px 0 5px;
     padding: 0 7px;
-    /* background: none; */
 }
 
 a.details {
@@ -757,7 +687,6 @@ article.delivery h3 {
     width: 100%;
     height: 500px;
     overflow: hidden;
-    /* background: gray; */
 }
 
 .circle {
@@ -765,16 +694,13 @@ article.delivery h3 {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    /* background: red; */
     box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.1);
-    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.4); */
 }
 
 .shadows {
     position: relative;
     z-index: 50;
     height: 300px;
-    /* transform: translate(10px, 10px); */
 }
 
 .shadows .shadow-piptyk {
@@ -784,9 +710,7 @@ article.delivery h3 {
 }
 
 .shadows .shadow-piptyk .piptyk {
-    /* background: gray !important; */
     background: rgba(0, 0, 0, 0.4) !important;
-    /* background: red !important; */
     box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
 }
 
@@ -796,7 +720,6 @@ article.delivery h3 {
 }
 
 .shadows .shadow-second .second {
-    /* background: gray !important; */
     background-color: transparent;
     background-image: url(./second-hand.png);
     background-size: contain;
@@ -804,8 +727,6 @@ article.delivery h3 {
     transform-origin: 50% 71%;
     filter: grayscale(100%) blur(2px);
     opacity: 0.2;
-    /* background: rgba(0, 0, 0, 0.05) !important; */
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px; */
 }
 
 
@@ -814,9 +735,6 @@ article.delivery h3 {
 }
 
 .shadows .shadow-minute .minute {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.06) !important;
-    box-shadow: rgba(0, 0, 0, 0.12) 0 0 3px; */
     z-index: 31;
     position: absolute;
     background-color: transparent;
@@ -834,9 +752,6 @@ article.delivery h3 {
 }
 
 .shadows .shadow-hour .hour {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
     background-color: transparent;
     background-image: url(./hour-hand.png);
     background-size: contain;
@@ -852,9 +767,6 @@ article.delivery h3 {
 }
 
 .shadows .shadow-month .hour {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
     background-color: transparent;
     background-image: url(./hour-hand.png);
     background-size: contain;
@@ -870,9 +782,6 @@ article.delivery h3 {
 }
 
 .shadows .shadow-day .minute {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.06) !important;
-    box-shadow: rgba(0, 0, 0, 0.12) 0 0 3px; */
     background-color: transparent;
     background-image: url(./minute-hand.png);
     background-size: contain;
@@ -920,7 +829,6 @@ footer {
 }
 
 .super .shadows .shadow-second .second {
-    /* background: gray !important; */
     background-color: transparent;
     background-image: url(./second-hand.png);
     background-size: contain;
@@ -928,8 +836,6 @@ footer {
     transform-origin: 50% 71%;
     filter: grayscale(100%) blur(2px);
     opacity: 0.2;
-    /* background: rgba(0, 0, 0, 0.05) !important; */
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px; */
 }
 
 
@@ -956,9 +862,6 @@ footer {
 }
 
 .super .shadows .shadow-hour .hour {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
     box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
     background-color: transparent;
     background-image: none;
@@ -977,9 +880,6 @@ footer {
 }
 
 .super .shadows .shadow-minute .minute {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
     box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
     background-color: transparent;
     background-image: none;
@@ -998,9 +898,6 @@ footer {
 }
 
 .shadows .shadow-month .hour {
-    /* background: gray !important; */
-    /* background: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 0 3px; */
     background-color: transparent;
     background-image: url(./hour-hand.png);
     background-size: contain;
