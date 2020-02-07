@@ -192,38 +192,39 @@ main section.clock-section {
 
 @media only screen and (max-device-width: 1125px) {
     .main-wrapper {
-        /* width: 100vw; */
+        box-sizing: border-box;
         overflow-x: scroll;
-        /* overflow-y: hidden; */
-        -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        scroll-padding: 50% 10px;
+        justify-content: flex-start;
+        padding-top: 12px;
+        /* scroll-padding: 50% 0; */
         /* padding: 1rem; */
+        width: 100vw;
+        /* display: flex; */
+        /* justify-content: space-evenly; */
+        /* align-items: flex-start; */
     }
 
     section.clock-section {
         scroll-snap-align: center;
         width: 300px;
+        margin: 0 2px;
+        /* margin: 0 3px; */
         /* margin: 0 20px; */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    main {
-        /* box-sizing: border-box; */
-        
-        /* justify-content: ; */
-        width: 930px;
-        /* width: auto; */
-        /* padding: 0; */
-        padding: 0 20vw;
+    /* main {
+        width: auto;
+        padding: 0;
         margin-top: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: flex-start;
         
-    }
+    } */
 }
 
 @media only screen and (max-device-width: 340px) {

@@ -271,30 +271,11 @@ const $section1 = document.getElementById('section-1');
 const $section2 = document.getElementById('section-2');
 const $section3 = document.getElementById('section-3');
 const sections = [$section1, $section2, $section3];
-// $clockWrapper.scrollLeft = window.innerWidth * 0.175 + 475 - window.innerWidth / 2;
-// $clockWrapper.scrollLeft = window.innerWidth * 0.175 ;// - window.innerWidth / 2;
+const clockWrapperPadding = (window.innerWidth - 300) / 2;
+$section1.style.marginLeft = `${clockWrapperPadding}px`;
+$section3.style.paddingRight = `${clockWrapperPadding}px`;
 let i = 1;
 $clockWrapper.scrollLeft = sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2;
-const xs = [];
-for (i = 0; i < sections.length; i++) {
-    xs.push(sections[i].offsetLeft - (window.innerWidth - sections[i].offsetWidth) / 2)
-}
-
-const closest = (array, goal) => {
-    return array.reduce(function(prev, curr) {
-        return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-    });
-};
-
-
-// document.addEventListener('touchend', () => {
-//     // $clockWrapper.scrollLeft = closest(xs, $clockWrapper.scrollLeft);
-//     $clockWrapper.scroll({
-//         top: 0,
-//         left: closest(xs, $clockWrapper.scrollLeft),
-//         behavior: 'smooth'
-//     });
-// });
 
 const $buyPopup = document.getElementById('buy-popup');
 const $okButton = document.getElementById('ok');
