@@ -301,7 +301,6 @@ $buyButtons.forEach((button) => {
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, false);
-        var xhr = new XMLHttpRequest();
         xhr.send();
 
         $buyPopup.classList.remove('hide');
